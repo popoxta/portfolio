@@ -1,3 +1,7 @@
+import TitleCard from "./components/TitleCard.tsx";
+
 export default function App() {
-  return <h1>Test</h1>
+  return (
+      <TitleCard/>
+  )
 }

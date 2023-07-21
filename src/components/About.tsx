@@ -2,6 +2,8 @@ export default function About() {
     return (
         <section>
 
+            <img src="#" alt="#"/>
+
             <article>
                 <h2>It's nice to meet you.</h2>
                 <p>

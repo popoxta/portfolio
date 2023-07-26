@@ -5,11 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-      'lari-blue': '#03244B',
-      'lari-light-blue': '#D4E0FF'
+    extend: {
+      colors: {
+        'lari-blue': '#03244B',
+        'lari-light-blue': '#D4E0FF'
+      },
     },
-    extend: {},
   },
   plugins: [],
 }

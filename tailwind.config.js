@@ -10,6 +10,9 @@ export default {
         'lari-blue': '#03244B',
         'lari-light-blue': '#D4E0FF'
       },
+      fontSize: {
+        'mid': '1.46rem'
+      }
     },
   },
   plugins: [],

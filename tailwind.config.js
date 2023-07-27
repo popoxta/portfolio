@@ -11,7 +11,8 @@ export default {
         'lari-light-blue': '#D4E0FF'
       },
       fontSize: {
-        'mid': '1.46rem'
+        'large': '5rem',
+        'mid': '1.8rem'
       }
     },
   },

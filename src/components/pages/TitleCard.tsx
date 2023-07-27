@@ -3,12 +3,12 @@ export default function TitleCard() {
         <main className={'h-screen p-5 sm:p-12 bg-lari-blue'}>
             <div className={'h-full flex justify-start items-center relative border-2 p-4 sm:pl-24 sm:p-0 overflow-hidden'}>
             <section className={'-mt-20'}>
-                <h1 className={'flex flex-row sm:text-mid'}>
-                    <span className={'flex flex-col mr-3 text-lari-light-blue'}>
+                <h1 className={'flex flex-row sm:text-4xl '}>
+                    <span className={'flex flex-col mr-3 text-lari-light-blue sm:leading-8 sm:place-self-end sm:mb-2'}>
                         <span>Hi,</span>
                         <span>I'm</span>
                     </span>
-                    <span className={'uppercase font-bold text-white sm:text-7xl text-5xl'}>Lari</span>
+                    <span className={'uppercase font-bold text-white sm:text-large text-5xl'}>Lari</span>
                 </h1>
                 <p className={'text-xs mt-2 mb-1 italic tracking-wider text-lari-light-blue'}>definition (noun)</p>
                 <p className={'text-sm text-lari-light-blue'} style={{maxWidth: '22rem'}}>Software developer and lover of simple things like bunnies and stars</p>

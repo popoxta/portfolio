@@ -13,6 +13,9 @@ export default {
       fontSize: {
         'large': '5rem',
         'mid': '1.8rem'
+      },
+      height: {
+        'xxl': '32rem'
       }
     },
   },

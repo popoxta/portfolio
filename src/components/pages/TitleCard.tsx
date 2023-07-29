@@ -4,14 +4,14 @@ import {loadFull} from 'tsparticles';
 
 export default function TitleCard() {
 
-
     const particlesInit = async (main: Engine): Promise<void> => await loadFull(main)
 
     return (
         <main className={'h-screen p-5 sm:p-12 bg-lari-blue bg-gradient-radial '}>
             <div
                 className={'h-full flex justify-start items-center relative border-2 p-4 sm:p-0 overflow-hidden'}>
-                <Particles className={'absolute'} id={'tsparticles'} style={{position: 'initial'}} init={particlesInit}
+                <Particles className={'absolute w-full h-full'} id={'tsparticles'} style={{position: 'initial'}}
+                           init={particlesInit}
                            options={{
                                'particles': {
                                    'number': {
@@ -122,10 +122,11 @@ export default function TitleCard() {
                                },
                                fullScreen: {
                                    enable: false,
-                                   zIndex: -1
+                                   zIndex: -5
                                },
                                'retina_detect': true
                            }}/>
+
                 <section className={'-mt-20 sm:ml-24'}>
 
                     <h1 className={'flex flex-row sm:text-4xl'}>
@@ -139,11 +140,12 @@ export default function TitleCard() {
                     <p className={'text-sm text-lari-light-blue'} style={{maxWidth: '22rem'}}>Software developer and
                         lover of simple things like bunnies and stars ✨</p>
                 </section>
-                <div
-                    className={'w-px bg-white absolute left-0 right-0 mx-auto bottom-14 h-12 sm:bottom-20 sm:h-16 '}></div>
-                <button className={'absolute left-0 right-0 mx-auto text-sm text-white sm:bottom-11 bottom-5'}>Launch
+                <button className={'launch absolute left-0 right-0 mx-auto text-sm text-white bottom-5 sm:bottom-11 hover:text-lari-light-blue transition-colors'}>
+                    Launch
                 </button>
+                <div className={'launch-bar w-px bg-white absolute left-0 right-0 mx-auto bottom-14 h-12 sm:bottom-20 sm:h-16 transition-transform'}></div>
             </div>
         </main>
+
     )
 }

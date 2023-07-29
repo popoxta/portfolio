@@ -6,3 +6,11 @@
 * {
     font-family: 'Libre Baskerville', 'serif';
 }
+
+.launch-bar {
+    transform-origin: bottom;
+}
+
+.launch:hover ~ .launch-bar {
+    transform: scaleY(0);
+}

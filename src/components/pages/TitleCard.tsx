@@ -1,9 +1,133 @@
+import Particles from 'react-tsparticles';
+import {Engine} from 'tsparticles-engine'
+import {loadFull} from 'tsparticles';
+
 export default function TitleCard() {
+
+
+    const particlesInit = async (main: Engine): Promise<void> => await loadFull(main)
+
     return (
         <main className={'h-screen p-5 sm:p-12 bg-lari-blue bg-gradient-radial '}>
             <div
-                className={'h-full flex justify-start items-center relative border-2 p-4 sm:pl-24 sm:p-0 overflow-hidden'}>
-                <section className={'-mt-20'}>
+                className={'h-full flex justify-start items-center relative border-2 p-4 sm:p-0 overflow-hidden'}>
+                <Particles className={'absolute'} id={'tsparticles'} style={{position: 'initial'}} init={particlesInit}
+                           options={{
+                               'particles': {
+                                   'number': {
+                                       'value': 200,
+                                       'density': {
+                                           'enable': true,
+                                           'value_area': 700
+                                       }
+                                   },
+                                   'color': {
+                                       'value': '#ffffff'
+                                   },
+                                   'shape': {
+                                       'type': 'circle',
+                                       'stroke': {
+                                           'width': 0,
+                                           'color': '#000000'
+                                       },
+                                       'polygon': {
+                                           'nb_sides': 5
+                                       },
+                                       'image': {
+                                           'src': 'img/github.svg',
+                                           'width': 100,
+                                           'height': 100
+                                       }
+                                   },
+                                   'opacity': {
+                                       'value': 0.5,
+                                       'random': false,
+                                       'anim': {
+                                           'enable': true,
+                                           'speed': 0.2,
+                                           'opacity_min': 0,
+                                           'sync': false
+                                       }
+                                   },
+                                   'size': {
+                                       'value': 2,
+                                       'random': true,
+                                       'anim': {
+                                           'enable': true,
+                                           'speed': 2,
+                                           'size_min': 0,
+                                           'sync': false
+                                       }
+                                   },
+                                   'line_linked': {
+                                       'enable': false,
+                                       'distance': 150,
+                                       'color': '#ffffff',
+                                       'opacity': 0.5,
+                                       'width': 1
+                                   },
+                                   'move': {
+                                       'enable': true,
+                                       'speed': 0.2,
+                                       'direction': 'none',
+                                       'random': true,
+                                       'straight': false,
+                                       'out_mode': 'out',
+                                       'bounce': false,
+                                       'attract': {
+                                           'enable': false,
+                                           'rotateX': 600,
+                                           'rotateY': 1200
+                                       }
+                                   }
+                               },
+                               'interactivity': {
+                                   'detect_on': 'canvas',
+                                   'events': {
+                                       'onHover': {
+                                           'enable': true,
+                                           'mode': 'bubble'
+                                       },
+                                       'onclick': {
+                                           'enable': true,
+                                           'mode': 'push'
+                                       },
+                                       'resize': true
+                                   },
+                                   'modes': {
+                                       'grab': {
+                                           'distance': 300,
+                                           'line_linked': {
+                                               'opacity': 1
+                                           }
+                                       },
+                                       'bubble': {
+                                           'distance': 83,
+                                           'size': 1,
+                                           'duration': 3,
+                                           'opacity': 1,
+                                           'speed': 3
+                                       },
+                                       'repulse': {
+                                           'distance': 200,
+                                           'duration': 0.3
+                                       },
+                                       'push': {
+                                           'particles_nb': 4
+                                       },
+                                       'remove': {
+                                           'particles_nb': 2
+                                       }
+                                   }
+                               },
+                               fullScreen: {
+                                   enable: false,
+                                   zIndex: -1
+                               },
+                               'retina_detect': true
+                           }}/>
+                <section className={'-mt-20 sm:ml-24'}>
+
                     <h1 className={'flex flex-row sm:text-4xl'}>
                     <span className={'flex flex-col mr-3 text-lari-light-blue sm:leading-8 sm:place-self-end sm:mb-2'}>
                         <span>Hi,</span>

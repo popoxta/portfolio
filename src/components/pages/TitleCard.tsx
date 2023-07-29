@@ -1,6 +1,6 @@
 export default function TitleCard() {
     return (
-        <main className={'h-screen p-5 sm:p-12 bg-lari-blue'}>
+        <main className={'h-screen p-5 sm:p-12 bg-lari-blue bg-gradient-radial '}>
             <div
                 className={'h-full flex justify-start items-center relative border-2 p-4 sm:pl-24 sm:p-0 overflow-hidden'}>
                 <section className={'-mt-20'}>
@@ -13,7 +13,7 @@ export default function TitleCard() {
                     </h1>
                     <p className={'text-xs mt-2 mb-1 italic tracking-wider text-lari-light-blue'}>definition (noun)</p>
                     <p className={'text-sm text-lari-light-blue'} style={{maxWidth: '22rem'}}>Software developer and
-                        lover of simple things like bunnies and stars</p>
+                        lover of simple things like bunnies and stars ✨</p>
                 </section>
                 <div
                     className={'w-px bg-white absolute left-0 right-0 mx-auto bottom-14 h-12 sm:bottom-20 sm:h-16 '}></div>

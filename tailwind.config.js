@@ -22,6 +22,9 @@ export default {
       },
       spacing: {
         '1/10': '10%',
+      },
+      transitionTimingFunction: {
+        'smooth': 'cubic-bezier(.47,1.64,.41,.8)',
       }
     },
   },

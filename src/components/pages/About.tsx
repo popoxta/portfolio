@@ -1,6 +1,9 @@
 export default function About() {
     return (
-        <section className={'min-h-screen flex justify-center place-items-center p-5 mt-10 sm:mt-0'}>
+        <section className={'relative min-h-screen flex justify-center place-items-center p-5 mt-10 sm:mt-0'}>
+            <img src={'../../../hanging-stars.svg'} alt={'Stars hanging from the ceiling'}
+                 className={'absolute max-h-96 top-0 right-1/10 -z-10 invisible lg:visible'}
+            />
 
             <div className={'flex max-w-5xl gap-12 justify-center place-items-center flex-col sm:flex-row'}>
                 <img className={'rounded-full w-full h-64 sm:w-52 sm:h-xxl object-cover'}

@@ -26,39 +26,34 @@ export default function About() {
                     <motion.div
                         initial={{opacity: 0, x: '-60px'}}
                         whileInView={{opacity: 1, x: '0', transition: {ease: 'anticipate', duration: 0.8}}}>
-                        <h2 className={'text-5xl font-bold mb-10 text-lari-blue text-center sm:text-left'}>It's nice to meet you.</h2>
+                        <h2 className={'text-5xl font-bold mb-10 text-lari-blue text-center sm:text-left'}>It's nice to
+                            meet you.</h2>
                     </motion.div>
                     <motion.div
                         initial={{opacity: 0, x: '-60px'}}
                         whileInView={{opacity: 1, x: '0', transition: {ease: 'anticipate', duration: 1}}}>
                         <p className={'tracking-wide mb-5 text-center text-lari-blue sm:text-left'}>
                             My name’s Lari, and I am a creative artist and software developer based in Aotearoa New
-                            Zealand.
+                            Zealand, currently seeking junior roles or freelance opportunities.
                         </p>
                         <p className={'tracking-wide mb-5 text-center text-lari-blue sm:text-left'}>
                             I enjoy building memorable, fun and meaningful projects, and have a strong focus on making
-                            all
-                            things
-                            simple, as they should be.
+                            all things simple, as they should be.
                         </p>
                         <p className={'tracking-wide mb-5 text-center text-lari-blue sm:text-left'}>
                             My day-to day sees a wide range of technology, however my main tools of trade are
-                            Typescript,
-                            React,
-                            Tailwind, Node and MongoDB.
+                            Typescript, React, Tailwind, Node and MongoDB.
                         </p>
                         <p className={'tracking-wide mb-5 text-center text-lari-blue sm:text-left'}>
                             When not programming, you may find me listening to 80’s rock, making a good family Raclette
-                            and
-                            taking
-                            anyone I can convince to go on a 5 hour walk. Probably longer.
+                            and taking anyone I can convince to go on a 5 hour walk. Probably longer.
                         </p>
                     </motion.div>
                     <motion.div
                         initial={{opacity: 0, x: '-60px'}}
                         whileInView={{opacity: 1, x: '0', transition: {ease: 'anticipate', duration: 1.2}}}>
                         <p className={'tracking-wide text-sm text-center text-lari-blue sm:text-left'}>
-                            Want to know more or grab a coffee?
+                            Want to chat or grab a coffee?
                         </p>
 
                         <p className={'tracking-wide text-sm text-center text-lari-blue sm:text-left'}>

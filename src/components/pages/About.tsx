@@ -15,11 +15,11 @@ export default function About() {
 
             <div className={'flex max-w-5xl gap-12 justify-center place-items-center flex-col sm:flex-row'}>
                 <motion.div className={'h-64 sm:w-80 sm:h-xxl'}
-                    initial={{opacity: 0, y: '-60px'}}
-                    whileInView={{opacity: 1, y: '0', transition: {ease: 'anticipate', duration: 0.6}}}>
-                <img className={'rounded-full w-full h-full  object-cover'}
-                     src="https://images.unsplash.com/photo-1690228835779-8482c60093bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-                     alt=""/>
+                            initial={{opacity: 0, y: '-60px'}}
+                            whileInView={{opacity: 1, y: '0', transition: {ease: 'anticipate', duration: 0.6}}}>
+                    <img className={'rounded-full w-full h-full  object-cover'}
+                         src="https://images.unsplash.com/photo-1690228835779-8482c60093bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                         alt=""/>
                 </motion.div>
 
                 <article ref={starsRef}>
@@ -57,13 +57,13 @@ export default function About() {
                     <motion.div
                         initial={{opacity: 0, x: '-60px'}}
                         whileInView={{opacity: 1, x: '0', transition: {ease: 'anticipate', duration: 1.2}}}>
-                    <p className={'tracking-wide text-sm text-center text-lari-blue sm:text-left'}>
-                        Want to know more or grab a coffee?
-                    </p>
+                        <p className={'tracking-wide text-sm text-center text-lari-blue sm:text-left'}>
+                            Want to know more or grab a coffee?
+                        </p>
 
-                    <p className={'tracking-wide text-sm text-center text-lari-blue sm:text-left'}>
-                        Feel free to <a href="#contact">get in touch.</a>
-                    </p>
+                        <p className={'tracking-wide text-sm text-center text-lari-blue sm:text-left'}>
+                            Feel free to <a href="#contact">get in touch.</a>
+                        </p>
                     </motion.div>
                 </article>
             </div>

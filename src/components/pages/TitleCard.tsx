@@ -145,12 +145,23 @@ export default function TitleCard() {
                             lover of simple things like bunnies and stars ✨</p>
                     </motion.div>
                 </section>
-                <button
-                    className={'launch absolute left-0 right-0 mx-auto text-sm text-white bottom-5 sm:bottom-11 hover:text-lari-light-blue transition-colors'}>
-                    Launch
-                </button>
-                <div
-                    className={'launch-bar w-px bg-white absolute left-0 right-0 mx-auto bottom-14 h-12 sm:bottom-20 sm:h-16 transition-transform'}></div>
+
+                <motion.div
+                    className={' mx-auto absolute w-fit left-0 right-0 bottom-5 sm:bottom-11'}
+                    initial={{opacity: 0, y: '-10px'}}
+                    whileInView={{opacity: 1, y: '0', transition: {ease: 'anticipate', duration: 1}}}>
+                    <button
+                        className={'launch text-sm text-white hover:text-lari-light-blue transition-colors'}>
+                        Launch
+                    </button>
+                </motion.div>
+                <motion.div
+                    className={' mx-auto absolute w-fit left-0 right-0 bottom-14 sm:bottom-20 '}
+                    initial={{opacity: 0, y: '-10px'}}
+                    whileInView={{opacity: 1, y: '0', transition: {ease: 'anticipate', duration: 1.2}}}>
+                    <div
+                        className={'launch-bar w-px bg-white h-12 sm:h-16 transition-transform'}></div>
+                </motion.div>
             </div>
         </main>
 

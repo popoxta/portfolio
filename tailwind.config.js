@@ -19,6 +19,9 @@ export default {
       },
       backgroundImage: { // light -> dark
         'gradient-radial': 'radial-gradient(circle at bottom right, #946086 5%, #745783 15%, #474989 30%, #324072, #253B6B, #163361, #102E5B, #0B2B57, #062750, #03244B)'
+      },
+      spacing: {
+        '1/10': '10%',
       }
     },
   },

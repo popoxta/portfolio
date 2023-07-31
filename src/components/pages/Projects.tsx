@@ -1,14 +1,24 @@
 export default function Projects() {
-    // const projectNames: string[] = ['name 1', 'name 2', 'name 3', 'name 4']
+    const projectNames: string[] = ['name 1', 'name 2', 'name 3', 'name 4']
+
+    const projectNamesRendered = projectNames.map(proj => {
+        return (
+            <h3 className={'font-bold text-sm text-lari-blue'}>
+                {proj}
+            </h3>
+        )
+    })
 
     return (
         <section className={'relative min-h-screen flex justify-center place-items-center p-5 mt-10 sm:mt-0'}>
             <div className={'flex flex-col'}>
-                <h2 className={'text-5xl font-bold mb-10 text-lari-blue text-center sm:text-left'}>
+                <h2 className={'text-5xl font-bold text-lari-blue text-center sm:text-left'}>
                     Projects
                 </h2>
-                <div className={'bg-lari-light-blue h-0.5 w-96 -mt-11 -z-10'}></div>
-
+                <div className={'bg-lari-light-blue h-0.5 w-96 -mt-1 -z-10'}></div>
+                <div className={'flex gap-10 mt-7'}>
+                    {projectNamesRendered}
+                </div>
             </div>
         </section>
     )

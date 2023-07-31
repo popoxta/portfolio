@@ -53,7 +53,7 @@ export default function About() {
                         initial={{opacity: 0, x: '-60px'}}
                         whileInView={{opacity: 1, x: '0', transition: {ease: 'anticipate', duration: 1.2}}}>
                         <p className={'tracking-wide text-sm text-center text-lari-blue sm:text-left'}>
-                            Want to chat or grab a coffee?
+                            Want to know more or grab a coffee?
                         </p>
 
                         <p className={'tracking-wide text-sm text-center text-lari-blue sm:text-left'}>

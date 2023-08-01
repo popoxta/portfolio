@@ -15,7 +15,7 @@ export default {
         'mid': '1.8rem'
       },
       height: {
-        'xxl': '32rem'
+        'xxl': '32rem',
       },
       width: {
         '9/10': '90%'

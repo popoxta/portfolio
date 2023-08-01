@@ -18,8 +18,8 @@ export default function Projects() {
                     <h2 className={'text-5xl font-bold text-lari-blue text-center sm:text-left'}>
                         Projects
                     </h2>
-                    <div className={'bg-lari-light-blue h-0.5 w-96 -mt-1 -z-10'}></div>
-                    <div className={'flex gap-10 mt-5 ml-1'}>
+                    <div className={'bg-lari-light-blue h-0.5 w-96 -mt-1 -z-10 mx-auto sm:mx-0'}></div>
+                    <div className={'flex gap-10 mt-5 ml-1 justify-center sm:justify-start'}>
                         {projectNamesRendered}
                     </div>
                 </div>

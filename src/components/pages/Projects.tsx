@@ -2,6 +2,7 @@ import ProjectCard from "../ProjectCard.tsx";
 import {ReactElement, useState} from "react";
 import {AnimatePresence, motion} from "framer-motion";
 import projectsData from "../../data/projectsData.tsx";
+import {slideRightVariant, slideInOutVariant} from "../../variants/variants.ts";
 
 export default function Projects() {
     const [page, setPage] = useState(0)
@@ -22,22 +23,13 @@ export default function Projects() {
     const projectCards: ReactElement[] = projectsData.map(project => <ProjectCard key={project.name}
                                                                                   project={project}/>)
 
-    const slideRightVariant = {
-        hidden: {opacity: 0, x: -100},
-        show: {opacity: 1, x: 0, transition: {ease: 'anticipate', duration: 0.8, staggerChildren: 0.2}}
-    }
-
-    const slideInOutVariant = {
-        hidden: {x: -50, opacity: 0},
-        center: {x: 0, opacity: 1},
-    }
-
     return (
-        <section className={'relative min-h-screen flex flex-col place-items-center p-5 mt-10 pt-1/10 lg:mt-0'}>
-            <motion.div
-                variants={slideRightVariant}
-                initial={'hidden'}
-                animate={'show'}
+        <motion.section
+            variants={slideRightVariant}
+            initial={'hidden'}
+            animate={'show'}
+            className={'relative min-h-screen flex flex-col place-items-center p-5 mt-10 pt-1/10 lg:mt-0'}>
+            <div
                 className={'max-w-5xl'}>
                 <div className={'mb-10'}>
                     <motion.h2 variants={slideRightVariant}
@@ -64,7 +56,7 @@ export default function Projects() {
                         </motion.div>
                     </AnimatePresence>
                 </motion.div>
-            </motion.div>
-        </section>
+            </div>
+        </motion.section>
     )
 }

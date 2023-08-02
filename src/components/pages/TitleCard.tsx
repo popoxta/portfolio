@@ -2,16 +2,57 @@ import Particles from 'react-tsparticles';
 import {Engine} from 'tsparticles-engine'
 import {loadFull} from 'tsparticles';
 import {motion} from "framer-motion";
+import {slideDownVariant, slideHorizontal} from "../../variants/variants.ts";
 
 export default function TitleCard() {
 
     const particlesInit = async (main: Engine): Promise<void> => await loadFull(main)
+    const slideRight = slideHorizontal(-60)
 
     return (
         <main className={'h-screen p-5 sm:p-12 bg-lari-blue bg-gradient-radial '}>
-            <div
-                className={'h-full flex justify-start items-center relative border-2 p-4 sm:p-0 overflow-hidden'}>
-                <Particles className={'absolute w-full h-full'} id={'tsparticles'} style={{position: 'initial'}}
+            <div className={'border-2 p-4 sm:p-0 overflow-hidden h-full relative'}>
+                <motion.section
+                    variants={slideRight}
+                    initial={'hidden'}
+                    whileInView={'show'}
+                    className={'h-full flex justify-start items-center relative '}
+                >
+                    <div className={'sm:pl-16'}>
+                        <motion.div>
+                            <h1 className={'flex flex-row sm:text-4xl'}>
+                    <span className={'flex flex-col mr-3 text-lari-light-blue sm:leading-8 sm:place-self-end sm:mb-2'}>
+                        <span>Hi,</span>
+                        <span>I'm</span>
+                    </span>
+                                <span className={'uppercase font-bold text-white sm:text-large text-5xl'}>Lari</span>
+                            </h1>
+                        </motion.div>
+                        <motion.div variants={slideRight}>
+                            <p className={'text-xs mt-2 mb-1 italic tracking-wider text-lari-light-blue'}>definition
+                                (noun)</p>
+                            <p className={'text-sm text-lari-light-blue'} style={{maxWidth: '22rem'}}>Software developer
+                                and
+                                lover of simple things like bunnies and stars ✨</p>
+                        </motion.div>
+                    </div>
+
+                    <motion.div
+                        className={'mx-auto absolute w-fit bottom-5 left-0 right-0 sm:bottom-11'}
+                        variants={slideDownVariant}>
+                        <button
+                            className={'launch text-sm text-white hover:text-lari-light-blue transition-colors'}>
+                            Launch
+                        </button>
+                    </motion.div>
+                    <motion.div
+                        className={' mx-auto absolute w-fit bottom-14 left-0 right-0 sm:bottom-20 '}
+                        variants={slideDownVariant}>
+                        <div className={'launch-bar w-px bg-white h-12 sm:h-16 transition-transform'}></div>
+                    </motion.div>
+                </motion.section>
+                <Particles className={'absolute w-full h-full top-0'} id={'tsparticles'}
+
                            init={particlesInit}
                            options={{
                                'particles': {
@@ -122,46 +163,6 @@ export default function TitleCard() {
                                },
                                'retina_detect': true
                            }}/>
-
-                <section className={'-mt-20 sm:ml-24'}>
-                    <motion.div
-                        initial={{opacity: 0, x: '-60px'}}
-                        whileInView={{opacity: 1, x: '0', transition: {ease: 'anticipate', duration: 1}}}>
-                        <h1 className={'flex flex-row sm:text-4xl'}>
-                    <span className={'flex flex-col mr-3 text-lari-light-blue sm:leading-8 sm:place-self-end sm:mb-2'}>
-                        <span>Hi,</span>
-                        <span>I'm</span>
-                    </span>
-
-                            <span className={'uppercase font-bold text-white sm:text-large text-5xl'}>Lari</span>
-                        </h1>
-                    </motion.div>
-                    <motion.div
-                        initial={{opacity: 0, x: '-60px'}}
-                        whileInView={{opacity: 1, x: '0', transition: {ease: 'anticipate', duration: 1.2}}}>
-                        <p className={'text-xs mt-2 mb-1 italic tracking-wider text-lari-light-blue'}>definition
-                            (noun)</p>
-                        <p className={'text-sm text-lari-light-blue'} style={{maxWidth: '22rem'}}>Software developer and
-                            lover of simple things like bunnies and stars ✨</p>
-                    </motion.div>
-                </section>
-
-                <motion.div
-                    className={' mx-auto absolute w-fit left-0 right-0 bottom-5 sm:bottom-11'}
-                    initial={{opacity: 0, y: '-10px'}}
-                    whileInView={{opacity: 1, y: '0', transition: {ease: 'anticipate', duration: 1}}}>
-                    <button
-                        className={'launch text-sm text-white hover:text-lari-light-blue transition-colors'}>
-                        Launch
-                    </button>
-                </motion.div>
-                <motion.div
-                    className={' mx-auto absolute w-fit left-0 right-0 bottom-14 sm:bottom-20 '}
-                    initial={{opacity: 0, y: '-10px'}}
-                    whileInView={{opacity: 1, y: '0', transition: {ease: 'anticipate', duration: 1.2}}}>
-                    <div
-                        className={'launch-bar w-px bg-white h-12 sm:h-16 transition-transform'}></div>
-                </motion.div>
             </div>
         </main>
 

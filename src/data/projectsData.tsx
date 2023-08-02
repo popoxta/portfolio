@@ -15,7 +15,7 @@ const projectsData: Project[] = [
     },
     {
         name: 'Heike\'s Cafe',
-        description: 'The landing page for Heike\'s Cafe is a client project designed and created from scratch to the' +
+        description: 'The landing page for Heike\'s Cafe is a client project designed and created from scratch to ' +
             'promote the owner\'s cafe in Coraki, Australia. The landing page was designed from the ground up to accurately' +
             'portray the business, and is created with React and Figma.',
         image: '',
@@ -28,8 +28,8 @@ const projectsData: Project[] = [
     {
         name: 'Pomo Buddy',
         description: 'Pomo Buddy is a friendly pomodoro timer to aid productivity and keep you focused on your studies. ' +
-            'Pomo Buddy was created with Typescript and TailwindCSS. I took on a creative flair with this project and ' +
-            'designed and drew the tomato friend in Procreate to accompany the project.',
+            'Pomo Buddy was created with Typescript and TailwindCSS, - additionally, I took on a creative flair with ' +
+            'this project and designed and drew the tomato friend in Procreate to accompany the project.',
         image: '',
         links: {
             github: 'https://github.com/popoxta/pomodoro',

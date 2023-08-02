@@ -19,32 +19,52 @@ export default function Projects() {
 
     const selectProject = (index: number): void => setPage(index)
 
-    const projectCards: ReactElement[] = projectsData.map(project => <ProjectCard project={project}/>)
+    const projectCards: ReactElement[] = projectsData.map(project => <ProjectCard key={project.name}
+                                                                                  project={project}/>)
+
+    const slideRightVariant = {
+        hidden: {opacity: 0, x: -100},
+        show: {opacity: 1, x: 0, transition: {ease: 'anticipate', duration: 0.8, staggerChildren: 0.2}}
+    }
+
+    const slideInOutVariant = {
+        hidden: {x: -50, opacity: 0},
+        center: {x: 0, opacity: 1},
+    }
 
     return (
         <section className={'relative min-h-screen flex flex-col place-items-center p-5 mt-10 pt-1/10 lg:mt-0'}>
-            <div className={'max-w-5xl'}>
+            <motion.div
+                variants={slideRightVariant}
+                initial={'hidden'}
+                animate={'show'}
+                className={'max-w-5xl'}>
                 <div className={'mb-10'}>
-                    <h2 className={'text-5xl font-bold text-lari-blue text-center lg:text-left'}>
+                    <motion.h2 variants={slideRightVariant}
+                               className={'text-5xl font-bold text-lari-blue text-center lg:text-left'}>
                         Projects
-                    </h2>
-                    <div className={'flex gap-10 ml-1 mt-5 justify-center lg:justify-start'}>
-                        {projectsRendered}
-                    </div>
-                </div>
-                <AnimatePresence initial={false} mode={'wait'}>
+                    </motion.h2>
+
                     <motion.div
-                        key={page}
-                        initial={{x: 50, opacity: 0}}
-                        animate={{x: 0, opacity: 1}}
-                        exit={{x: -50, opacity: 0}}
-                        transition={{x: {type: "spring", stiffness: 300, damping: 30}, duration: 0.3}}
-                        className={'flex'}
-                    >
-                        {projectCards[page]}
+                        variants={slideRightVariant}
+                        className={'flex gap-5 ml-1 mt-5 justify-center sm:gap-10 lg:justify-start'}>
+                        {projectsRendered}
                     </motion.div>
-                </AnimatePresence>
-            </div>
+                </div>
+                <motion.div>
+                    <AnimatePresence initial={false} mode={'wait'}>
+                        <motion.div
+                            key={page}
+                            variants={slideInOutVariant}
+                            initial={'hidden'}
+                            animate={'center'}
+                            transition={{ease: 'anticipate', duration: 0.6}}
+                        >
+                            {projectCards[page]}
+                        </motion.div>
+                    </AnimatePresence>
+                </motion.div>
+            </motion.div>
         </section>
     )
 }

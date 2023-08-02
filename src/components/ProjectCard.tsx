@@ -5,8 +5,8 @@ import {Project} from "../types/project.tsx";
 
 export default function ProjectCard({project}: { project: Project }) {
 
-    const descriptions = project.description.split('.').map(sentence =>
-        <p className={'text-sm '}>{sentence}</p>)
+    const descriptions = project.description.split('.').map((sentence, i) =>
+        <p key={i} className={'text-sm '}>{sentence}</p>)
 
     return (
         <div className={'relative flex place-items-center w-9/10 mx-auto lg:max-w-none md:max-w-3xl '}>

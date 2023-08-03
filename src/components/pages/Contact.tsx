@@ -7,13 +7,14 @@ export default function Contact() {
         <section className={'min-h-screen pt-1/10 p-5 relative flex flex-col justify-center place-items-center'}>
             <div className={'max-w-5xl'}>
                 <div className={'mb-10'}>
-                <h2 className={'text-5xl font-bold text-lari-blue mb-5 text-center lg:text-left'}>Let's chat</h2>
-                <p className={'text-lari-blue text-center lg:text-left'}>Want to connect, have a chat about software, my projects, coffee or
-                    simply the weather?</p>
-                <p className={'text-lari-blue text-center lg:text-left'}>Send me a message and let's talk!</p>
+                    <h2 className={'text-5xl font-bold text-lari-blue mb-5 text-center lg:text-left'}>Let's chat</h2>
+                    <p className={'text-lari-blue text-center lg:text-left'}>Want to connect, have a chat about
+                        software, my projects, coffee or
+                        simply the weather?</p>
+                    <p className={'text-lari-blue text-center lg:text-left'}>Send me a message and let's talk!</p>
                 </div>
                 <div className={'flex gap-14 flex-col lg:flex-row'}>
-                    <form >
+                    <form>
                         <div className={'flex flex-col gap-5 sm:flex-row'}>
                             <label htmlFor={"name"} className={'flex flex-col text-lari-gray text-sm font-bold'}>Name
                                 <input
@@ -25,13 +26,15 @@ export default function Contact() {
                                 <input
                                     className={'bg-lari-lighter-blue font-normal p-1.5 rounded-md border-2 border-lari-light-blue'}
                                     type={"text"} id={"email"} name={"email"}/>
+
                             </label>
                         </div>
                         <label htmlFor={"message"} className={'mt-5 flex flex-col text-lari-gray text-sm font-bold'}>
                             Message
+
                             <textarea
                                 className={'bg-lari-lighter-blue font-normal p-1.5 rounded-md border-2 border-lari-light-blue'}
-                                name={"message"} id={"message"} rows={10} ></textarea>
+                                name={"message"} id={"message"} rows={10}></textarea>
                         </label>
                         <button type={'submit'}>Submit</button>
                     </form>
@@ -39,7 +42,8 @@ export default function Contact() {
                         <div>
                             <FontAwesomeIcon icon={faEnvelope} size={'2xl'}
                                              className={'hover:brightness-90 transition-all mr-5'} color={'#afaee3'}/>
-                            <a href={''} className={'text-lari-gray text-sm font-bold not-italic'}>larissaruecker7@gmail.com</a>
+                            <a href={''}
+                               className={'text-lari-gray text-sm font-bold not-italic'}>larissaruecker7@gmail.com</a>
                         </div>
                         <div>
                             <FontAwesomeIcon icon={faGithub} size={'2xl'}
@@ -50,6 +54,7 @@ export default function Contact() {
                             <FontAwesomeIcon icon={faLinkedin} size={'2xl'}
                                              className={'hover:brightness-90 transition-all mr-5'} color={'#afaee3'}/>
                             <a href={''} className={'text-lari-gray text-sm font-bold not-italic'}>linkedIn</a>
+
                         </div>
                     </address>
                 </div>

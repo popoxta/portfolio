@@ -20,8 +20,8 @@ export default function Projects() {
 
     const selectProject = (index: number): void => setPage(index)
 
-    const projectCards: ReactElement[] = projectsData.map(project => <ProjectCard key={project.name}
-                                                                                  project={project}/>)
+    const projectCards: ReactElement[] = projectsData.map(project =>
+        <ProjectCard key={project.name} project={project}/>)
 
     const slideRight = slideHorizontal(-60)
 
@@ -57,7 +57,8 @@ export default function Projects() {
                         </motion.div>
                     </AnimatePresence>
                 </motion.div>
-                <motion.img src={'/star-cluster.svg'} variants={slideRight} className={'absolute max-w-[16rem] -right-16 -top-10'} />
+                <motion.img src={'/star-cluster.svg'} variants={slideRight}
+                            className={'absolute max-w-[13rem] sm:max-w-[16rem] -z-10 -right-0 -top-24 md:-top-16 lg:-right-16 lg:-top-10'} />
             </div>
         </motion.section>
     )

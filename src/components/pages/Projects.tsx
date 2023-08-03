@@ -30,9 +30,9 @@ export default function Projects() {
             variants={slideRight}
             initial={'hidden'}
             whileInView={'show'}
-            className={'relative min-h-screen flex flex-col place-items-center p-5 mt-10 pt-1/10 lg:mt-0'}>
+            className={'min-h-screen flex flex-col place-items-center p-5 mt-10 pt-1/10 lg:mt-0'}>
             <div
-                className={'max-w-5xl'}>
+                className={'max-w-5xl relative'}>
                 <div className={'mb-10'}>
                     <motion.h2 variants={slideRight}
                                className={'text-5xl font-bold text-lari-blue text-center lg:text-left'}>
@@ -57,6 +57,7 @@ export default function Projects() {
                         </motion.div>
                     </AnimatePresence>
                 </motion.div>
+                <motion.img src={'/star-cluster.svg'} variants={slideRight} className={'absolute max-w-[16rem] -right-16 -top-10'} />
             </div>
         </motion.section>
     )

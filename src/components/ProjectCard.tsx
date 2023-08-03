@@ -11,7 +11,7 @@ export default function ProjectCard({project}: { project: Project }) {
     return (
         <div className={'relative flex place-items-center w-9/10 mx-auto lg:max-w-none md:max-w-3xl '}>
             <div
-                className={'absolute opacity-30 right-0 bg-lari-light-blue -z-10 w-full bottom-0 h-3/4 lg:h-full lg:w-9/10 '}>
+                className={'absolute right-0 bg-lari-lighter-blue -z-10 w-full bottom-0 h-3/4 lg:h-full lg:w-9/10 '}>
             </div>
             <div
                 className={'flex h-full min-h-[38rem] place-items-center flex-col lg:min-h-[25rem] lg:flex-row lg:gap-10'}>

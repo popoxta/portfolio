@@ -8,7 +8,9 @@ export default {
     extend: {
       colors: {
         'lari-blue': '#03244B',
-        'lari-light-blue': '#D4E0FF'
+        'lari-light-blue': '#D4E0FF',
+        'lari-lighter-blue': '#FAFBFF',
+        'lari-gray': '#737EA3'
       },
       fontSize: {
         'large': '5rem',

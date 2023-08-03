@@ -8,7 +8,8 @@ export default function About() {
 
     const starStyle: string = starsInView ? '' : '-translate-y-full'
 
-    const slideRight = slideHorizontal(-60)
+    const slideRight = slideHorizontal(-30)
+    const slideDown = slideDownVariant(-60)
 
     return (
         <section
@@ -20,7 +21,7 @@ export default function About() {
             <div
                 className={'flex max-w-5xl gap-12 justify-center place-items-center flex-col sm:flex-row'}>
                 <motion.div className={'h-64 sm:w-80 sm:h-xxl w-full'}
-                            variants={slideDownVariant}
+                            variants={slideDown}
                             initial={'hidden'}
                             whileInView={'show'}
                 >

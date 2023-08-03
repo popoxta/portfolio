@@ -15,7 +15,7 @@ export const slideInOutVariant: Variants = {
     center: {x: 0, opacity: 1},
 }
 
-export const slideDownVariant: Variants = {
-    hidden: {opacity: 0, y: -60},
+export const slideDownVariant = (n: number): Variants => ({
+    hidden: {opacity: 0, y: n},
     show: {opacity: 1, y: 0, transition: {ease: 'anticipate', duration: 0.8, staggerChildren: 0.2}}
-}
+})

@@ -7,7 +7,9 @@ import {slideDownVariant, slideHorizontal} from "../../variants/variants.ts";
 export default function TitleCard() {
 
     const particlesInit = async (main: Engine): Promise<void> => await loadFull(main)
-    const slideRight = slideHorizontal(-60)
+
+    const slideRight = slideHorizontal(-50)
+    const slideDown = slideDownVariant(-30)
 
     return (
         <main className={'h-screen p-5 sm:p-12 bg-lari-blue bg-gradient-radial '}>
@@ -36,10 +38,13 @@ export default function TitleCard() {
                                 lover of simple things like bunnies and stars ✨</p>
                         </motion.div>
                     </div>
-
+                </motion.section>
+                <motion.div variants={slideDown}
+                            initial={'hidden'}
+                            whileInView={'show'}>
                     <motion.div
                         className={'mx-auto absolute w-fit bottom-5 left-0 right-0 sm:bottom-11'}
-                        variants={slideDownVariant}>
+                        variants={slideDown}>
                         <button
                             className={'launch text-sm text-white hover:text-lari-light-blue transition-colors'}>
                             Launch
@@ -47,10 +52,10 @@ export default function TitleCard() {
                     </motion.div>
                     <motion.div
                         className={' mx-auto absolute w-fit bottom-14 left-0 right-0 sm:bottom-20 '}
-                        variants={slideDownVariant}>
+                        variants={slideDown}>
                         <div className={'launch-bar w-px bg-white h-12 sm:h-16 transition-transform'}></div>
                     </motion.div>
-                </motion.section>
+                </motion.div>
                 <Particles className={'absolute w-full h-full top-0'} id={'tsparticles'}
 
                            init={particlesInit}

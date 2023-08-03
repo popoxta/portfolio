@@ -27,19 +27,19 @@ export default function ProjectCard({project}: { project: Project }) {
                         {
                             project.links.github &&
                             <a href={project.links.github} className={'hover:brightness-90 transition-all'}>
-                                <FontAwesomeIcon size={'2xl'} icon={faGithub} color={'#9D9CE6'}/>
+                                <FontAwesomeIcon size={'2xl'} icon={faGithub} color={'#afaee3'}/>
                             </a>
                         }
                         {
                             project.links.figma &&
                             <a href={project.links.figma} className={'hover:brightness-90 transition-all'}>
-                                <FontAwesomeIcon size={'xl'} icon={faFigma} color={'#9D9CE6'}/>
+                                <FontAwesomeIcon size={'xl'} icon={faFigma} color={'#afaee3'}/>
                             </a>
                         }
                         {
                             project.links.live &&
                             <a href={project.links.live} className={'hover:brightness-90 transition-all'}>
-                                <FontAwesomeIcon size={'xl'} icon={faUpRightFromSquare} color={'#9D9CE6'}/>
+                                <FontAwesomeIcon size={'xl'} icon={faUpRightFromSquare} color={'#afaee3'}/>
                             </a>
                         }
                     </div>

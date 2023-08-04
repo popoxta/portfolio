@@ -1,6 +1,6 @@
 import ProjectCard from "../ProjectCard.tsx";
 import {ReactElement, useState} from "react";
-import {AnimatePresence, motion} from "framer-motion";
+import {AnimatePresence, motion, Variants} from "framer-motion";
 import projectsData from "../../data/projectsData.tsx";
 import {slideHorizontal} from "../../variants/variants.ts";
 
@@ -21,11 +21,11 @@ export default function Projects() {
     const projectCards: ReactElement[] = projectsData.map(project =>
         <ProjectCard key={project.name} project={project}/>)
 
-    const slideRight = slideHorizontal(-60)
+    const slideRight: Variants = slideHorizontal(-60)
 
     return (
         <section id={'projects'}
-            className={'min-h-screen flex flex-col place-items-center p-10 mt-10 lg:mt-0'}>
+                 className={'min-h-screen flex flex-col place-items-center p-10 mt-10 lg:mt-0'}>
             <motion.div variants={slideRight} initial={'hidden'} whileInView={'show'} className={'max-w-5xl relative'}>
                 <div className={'mb-10'}>
                     <motion.h2 variants={slideRight}

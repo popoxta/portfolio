@@ -1,15 +1,15 @@
 import Particles from 'react-tsparticles';
 import {Engine} from 'tsparticles-engine'
 import {loadFull} from 'tsparticles';
-import {motion} from "framer-motion";
+import {motion, Variants} from "framer-motion";
 import {slideDownVariant, slideHorizontal} from "../../variants/variants.ts";
 
 export default function TitleCard() {
 
     const particlesInit = async (main: Engine): Promise<void> => await loadFull(main)
 
-    const slideRight = slideHorizontal(-50)
-    const slideDown = slideDownVariant(-30)
+    const slideRight: Variants = slideHorizontal(-50)
+    const slideDown: Variants = slideDownVariant(-30)
 
     return (
         <main id={'home'} className={'h-screen p-5 sm:p-12 bg-lari-blue bg-gradient-radial '}>
@@ -33,17 +33,17 @@ export default function TitleCard() {
                         </motion.div>
                     </div>
                 </motion.section>
-                    <motion.div className={'mx-auto absolute w-fit bottom-5 left-0 right-0 sm:bottom-11 z-50'}
-                variants={slideDown} initial={'hidden'} whileInView={'show'} >
-                        <button
-                            className={'launch text-sm text-white hover:text-lari-light-blue transition-colors cursor-pointer'}>
-                            <a href="#about">Launch</a>
-                        </button>
-                    </motion.div>
-                    <motion.div className={' mx-auto absolute w-fit bottom-14 left-0 right-0 sm:bottom-20 '}
-                                variants={slideDown} initial={'hidden'} whileInView={'show'}>
-                        <div className={'launch-bar w-px bg-white h-12 sm:h-16 transition-transform'}></div>
-                    </motion.div>
+                <motion.div className={'mx-auto absolute w-fit bottom-5 left-0 right-0 sm:bottom-11 z-50'}
+                            variants={slideDown} initial={'hidden'} whileInView={'show'}>
+                    <button
+                        className={'launch text-sm text-white hover:text-lari-light-blue transition-colors cursor-pointer'}>
+                        <a href="#about">Launch</a>
+                    </button>
+                </motion.div>
+                <motion.div className={' mx-auto absolute w-fit bottom-14 left-0 right-0 sm:bottom-20 '}
+                            variants={slideDown} initial={'hidden'} whileInView={'show'}>
+                    <div className={'launch-bar w-px bg-white h-12 sm:h-16 transition-transform'}></div>
+                </motion.div>
 
                 <Particles className={'absolute w-full h-full top-0'} id={'tsparticles'}
                            init={particlesInit} options={{

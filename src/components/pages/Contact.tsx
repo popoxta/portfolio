@@ -2,14 +2,15 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons"
 import {slideHorizontal} from "../../variants/variants.ts";
-import {motion} from "framer-motion";
+import {motion, Variants} from "framer-motion";
 
 export default function Contact() {
 
-    const slideRight = slideHorizontal(-30)
+    const slideRight: Variants = slideHorizontal(-30)
 
     return (
-        <section id={'contact'} className={'min-h-screen p-10 relative flex flex-col justify-center place-items-center'}>
+        <section id={'contact'}
+                 className={'min-h-screen p-10 relative flex flex-col justify-center place-items-center'}>
             <motion.div variants={slideRight} initial={'hidden'} whileInView={'show'} className={'max-w-5xl'}>
                 <div className={'mb-10'}>
                     <motion.h2 variants={slideRight}

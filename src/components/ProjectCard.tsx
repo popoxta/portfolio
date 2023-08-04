@@ -2,10 +2,11 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faFigma} from "@fortawesome/free-brands-svg-icons"
 import {faUpRightFromSquare} from "@fortawesome/free-solid-svg-icons";
 import {Project} from "../types/project.tsx";
+import {ReactElement} from "react";
 
 export default function ProjectCard({project}: { project: Project }) {
 
-    const descriptions = project.description.split('.').map((sentence, i) =>
+    const descriptions: ReactElement[] = project.description.split('.').map((sentence: string, i: number) =>
         <p key={i} className={'text-sm text-lari-blue'}>{sentence}</p>)
 
     return (

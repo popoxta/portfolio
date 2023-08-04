@@ -1,4 +1,4 @@
-import {useInView, motion} from "framer-motion";
+import {useInView, motion, Variants} from "framer-motion";
 import React, {useRef} from "react";
 import {slideDownVariant, slideHorizontal} from "../../variants/variants.ts";
 
@@ -8,8 +8,8 @@ export default function About() {
 
     const starStyle: string = starsInView ? '' : '-translate-y-full'
 
-    const slideRight = slideHorizontal(-30)
-    const slideDown = slideDownVariant(-60)
+    const slideRight:Variants = slideHorizontal(-30)
+    const slideDown:Variants = slideDownVariant(-60)
 
     return (
         <section id={'about'}

@@ -22,8 +22,7 @@ export default function Contact() {
     }
 
     return (
-        <section id={'contact'}
-                 className={'min-h-screen p-10 relative flex flex-col justify-center place-items-center'}>
+        <section id={'contact'} className={'min-h-screen p-10 relative flex flex-col justify-center place-items-center'}>
             <motion.div variants={slideRight} initial={'hidden'} whileInView={'show'} className={'max-w-5xl'}>
                 <div className={'mb-10'}>
                     <motion.h2 variants={slideRight}
@@ -51,7 +50,8 @@ export default function Contact() {
                                     type={"text"} id={"contact"} name={"contact"} value={form.contact} required onChange={handleChange}/>
                             </label>
                         </div>
-                        <label htmlFor={"message"} className={'mt-5 flex flex-col text-lari-gray text-sm font-bold'}>
+                        <label htmlFor={"message"}
+                                      className={'mt-5 flex flex-col text-lari-gray text-sm font-bold'}>
                             Message
                             <textarea
                                 className={'bg-lari-lighter-blue font-normal p-1.5 rounded-md border-2 border-lari-light-gray'}

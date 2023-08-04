@@ -5,6 +5,7 @@
 
 * {
     font-family: 'Libre Baskerville', 'serif';
+    scroll-behavior: smooth;
 }
 
 .launch-bar {

@@ -15,7 +15,7 @@ export default function TitleCard() {
         <main id={'home'} className={'h-screen p-5 sm:p-12 bg-lari-blue bg-gradient-radial '}>
             <div className={'border-2 p-4 sm:p-0 overflow-hidden h-full relative'}>
                 <motion.section variants={slideRight} initial={'hidden'} whileInView={'show'}
-                                className={'h-full flex justify-start items-center relative '}>
+                                className={'h-full flex justify-start items-center relative z-50'}>
                     <div className={'sm:pl-16'}>
                         <motion.div>
                             <h1 className={'flex flex-row sm:text-4xl'}>
@@ -33,19 +33,18 @@ export default function TitleCard() {
                         </motion.div>
                     </div>
                 </motion.section>
-                <motion.div variants={slideDown} initial={'hidden'} whileInView={'show'}>
-                    <motion.div className={'mx-auto absolute w-fit bottom-5 left-0 right-0 sm:bottom-11'}
-                                variants={slideDown}>
+                    <motion.div className={'mx-auto absolute w-fit bottom-5 left-0 right-0 sm:bottom-11 z-50'}
+                variants={slideDown} initial={'hidden'} whileInView={'show'} >
                         <button
-                            className={'launch text-sm text-white hover:text-lari-light-blue transition-colors'}>
-                            Launch
+                            className={'launch text-sm text-white hover:text-lari-light-blue transition-colors cursor-pointer'}>
+                            <a href="#about">Launch</a>
                         </button>
                     </motion.div>
                     <motion.div className={' mx-auto absolute w-fit bottom-14 left-0 right-0 sm:bottom-20 '}
-                                variants={slideDown}>
+                                variants={slideDown} initial={'hidden'} whileInView={'show'}>
                         <div className={'launch-bar w-px bg-white h-12 sm:h-16 transition-transform'}></div>
                     </motion.div>
-                </motion.div>
+
                 <Particles className={'absolute w-full h-full top-0'} id={'tsparticles'}
                            init={particlesInit} options={{
                     'particles': {

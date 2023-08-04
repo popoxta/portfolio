@@ -3,10 +3,23 @@ import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons"
 import {slideHorizontal} from "../../variants/variants.ts";
 import {motion, Variants} from "framer-motion";
+import {ChangeEvent, FormEvent, useState} from "react";
 
 export default function Contact() {
+    const [form, setForm] = useState({name: '', contact: '', message: ''})
 
     const slideRight: Variants = slideHorizontal(-30)
+
+    const handleSubmit = (e: FormEvent): void => {
+        e.preventDefault()
+        const subject = `Hello from ${form.name}`
+        const message = `${form.message}. Please reach me on ${form.contact}.`
+        window.location.href = `mailto:larissaruecker7@gmail.com?subject=${subject}&body=${message}`
+    }
+
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
+        setForm({...form, [e.target.name]: e.target.value})
+    }
 
     return (
         <section id={'contact'}
@@ -23,27 +36,27 @@ export default function Contact() {
                     </motion.div>
                 </div>
                 <div className={'flex gap-24 flex-col lg:flex-row'}>
-                    <motion.form variants={slideRight}>
+                    <motion.form variants={slideRight} onSubmit={handleSubmit}>
                         <div className={'flex flex-col gap-5 sm:flex-row min-w-full'}>
                             <label htmlFor={"name"}
                                    className={'flex flex-grow flex-col text-lari-gray text-sm font-bold'}>Name
                                 <input
                                     className={'bg-lari-lighter-blue font-normal p-1.5 rounded-md border-2 border-lari-light-gray'}
-                                    type={"text"} id={"name"} name={"name"}/>
+                                    type={"text"} id={"name"} name={"name"} value={form.name} required onChange={handleChange}/>
                             </label>
-                            <label htmlFor={"email"}
-                                   className={'flex flex-grow flex-col text-lari-gray text-sm font-bold'}>Email
+                            <label htmlFor={"contact"}
+                                   className={'flex flex-grow flex-col text-lari-gray text-sm font-bold'}>Contact
                                 <input
                                     className={'bg-lari-lighter-blue font-normal p-1.5 rounded-md border-2 border-lari-light-gray'}
-                                    type={"text"} id={"email"} name={"email"}/>
+                                    type={"text"} id={"contact"} name={"contact"} value={form.contact} required onChange={handleChange}/>
                             </label>
                         </div>
-                        <label htmlFor={"message"}
-                               className={'mt-5 flex flex-col text-lari-gray text-sm font-bold'}>
+                        <label htmlFor={"message"} className={'mt-5 flex flex-col text-lari-gray text-sm font-bold'}>
                             Message
                             <textarea
                                 className={'bg-lari-lighter-blue font-normal p-1.5 rounded-md border-2 border-lari-light-gray'}
-                                name={"message"} id={"message"} rows={10}></textarea>
+                                name={"message"} id={"message"} rows={10} value={form.message} required onChange={handleChange}>
+                            </textarea>
                         </label>
                         <button
                             className={'py-2 px-10 mt-5 text-sm text-lari-gray bg-lari-light-gray font-bold rounded-md hover:bg-lari-light-blue transition-all ease-in-ou'}

@@ -17,7 +17,7 @@ export default function ProjectCard({project}: { project: Project }) {
                 className={'flex h-full min-h-[38rem] place-items-center flex-col lg:min-h-[25rem] lg:flex-row lg:gap-10'}>
                 <img
                     className={'h-80 object-cover shrink-0 w-9/10 lg:w-96 '} alt={''}
-                    src="https://images.unsplash.com/photo-1690228835779-8482c60093bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                    src={project.image}
                 />
                 <div className={'relative flex flex-col gap-5 text-center pr-5 pl-5 py-5 lg:pl-0 lg:py-5 lg:text-left'}>
                     <h3 className={'text-3xl font-bold text-lari-blue lg:text-left'}>{project.name}</h3>

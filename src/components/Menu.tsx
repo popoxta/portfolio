@@ -1,5 +1,5 @@
 export default function Menu() {
-    return(
+    return (
         <nav className={'absolute flex flex-col gap-5'}>
             <a href={'#'}>About</a>
             <a href={'#'}>Projects</a>

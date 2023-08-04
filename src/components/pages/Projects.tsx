@@ -12,8 +12,7 @@ export default function Projects() {
             <button key={name} className={`relative font-bold text-sm text-lari-blue ${page === index ? '' : ''}`}
                     onClick={() => selectProject(index)}>
                 {name}
-                {index === page &&
-                    <motion.div className={'select-underline'} initial={false} layoutId={'underline'}/>}
+                {index === page && <motion.div className={'select-underline'} initial={false} layoutId={'underline'}/>}
             </button>
         )
     })
@@ -26,40 +25,30 @@ export default function Projects() {
     const slideRight = slideHorizontal(-60)
 
     return (
-        <motion.section
-            variants={slideRight}
-            initial={'hidden'}
-            whileInView={'show'}
+        <section
             className={'min-h-screen flex flex-col place-items-center p-5 mt-10 pt-1/10 lg:mt-0'}>
-            <div
-                className={'max-w-5xl relative'}>
+            <motion.div
+                variants={slideRight} initial={'hidden'} whileInView={'show'} className={'max-w-5xl relative'}>
                 <div className={'mb-10'}>
-                    <motion.h2 variants={slideRight}
-                               className={'text-5xl font-bold text-lari-blue text-center lg:text-left'}>
+                    <motion.h2 variants={slideRight} className={'text-5xl font-bold text-lari-blue text-center lg:text-left'}>
                         Projects
                     </motion.h2>
 
                     <motion.div
-                        variants={slideRight}
-                        className={'flex gap-5 ml-1 mt-5 justify-center sm:gap-10 lg:justify-start'}>
+                        variants={slideRight} className={'flex gap-5 ml-1 mt-5 justify-center sm:gap-10 lg:justify-start'}>
                         {projectsRendered}
                     </motion.div>
                 </div>
                 <motion.div variants={slideRight}>
                     <AnimatePresence initial={false} mode={'wait'}>
-                        <motion.div
-                            key={page}
-                            variants={slideRight}
-                            initial={'hidden'}
-                            animate={'show'}
-                        >
+                        <motion.div key={page} variants={slideRight} initial={'hidden'} animate={'show'}>
                             {projectCards[page]}
                         </motion.div>
                     </AnimatePresence>
                 </motion.div>
                 <motion.img src={'/star-cluster.svg'} variants={slideRight}
                             className={'absolute max-w-[13rem] sm:max-w-[16rem] -z-10 -right-0 -top-24 md:-top-16 lg:-right-16 lg:-top-10'} />
-            </div>
-        </motion.section>
+            </motion.div>
+        </section>
     )
 }

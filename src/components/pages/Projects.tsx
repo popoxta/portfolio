@@ -24,7 +24,7 @@ export default function Projects() {
     const slideRight = slideHorizontal(-60)
 
     return (
-        <section
+        <section id={'projects'}
             className={'min-h-screen flex flex-col place-items-center p-10 mt-10 lg:mt-0'}>
             <motion.div variants={slideRight} initial={'hidden'} whileInView={'show'} className={'max-w-5xl relative'}>
                 <div className={'mb-10'}>

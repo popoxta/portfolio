@@ -12,7 +12,7 @@ export default function TitleCard() {
     const slideDown = slideDownVariant(-30)
 
     return (
-        <main className={'h-screen p-5 sm:p-12 bg-lari-blue bg-gradient-radial '}>
+        <main id={'home'} className={'h-screen p-5 sm:p-12 bg-lari-blue bg-gradient-radial '}>
             <div className={'border-2 p-4 sm:p-0 overflow-hidden h-full relative'}>
                 <motion.section variants={slideRight} initial={'hidden'} whileInView={'show'}
                                 className={'h-full flex justify-start items-center relative '}>

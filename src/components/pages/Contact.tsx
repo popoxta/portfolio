@@ -9,7 +9,7 @@ export default function Contact() {
     const slideRight = slideHorizontal(-30)
 
     return (
-        <section className={'min-h-screen p-10 relative flex flex-col justify-center place-items-center'}>
+        <section id={'contact'} className={'min-h-screen p-10 relative flex flex-col justify-center place-items-center'}>
             <motion.div variants={slideRight} initial={'hidden'} whileInView={'show'} className={'max-w-5xl'}>
                 <div className={'mb-10'}>
                     <motion.h2 variants={slideRight}

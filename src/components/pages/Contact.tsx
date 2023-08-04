@@ -1,45 +1,54 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons"
+import {slideHorizontal} from "../../variants/variants.ts";
+import {motion} from "framer-motion";
 
 export default function Contact() {
+
+    const slideRight = slideHorizontal(-30)
+
     return (
-        <section className={'min-h-screen p-5 relative flex flex-col justify-center place-items-center'}>
-            <div className={'max-w-5xl'}>
+        <section className={'min-h-screen p-10 relative flex flex-col justify-center place-items-center'}>
+            <motion.div variants={slideRight} initial={'hidden'} whileInView={'show'} className={'max-w-5xl'}>
                 <div className={'mb-10'}>
-                    <h2 className={'text-5xl font-bold text-lari-blue mb-5 text-center lg:text-left'}>Let's chat</h2>
-                    <p className={'text-lari-blue text-center lg:text-left'}>Want to connect, have a chat about
-                        software, my projects, coffee or simply the weather?</p>
-                    <p className={'text-lari-blue text-center lg:text-left'}>Send me a message and let's talk!</p>
+                    <motion.h2 variants={slideRight}
+                               className={'text-5xl font-bold text-lari-blue mb-5 text-center lg:text-left'}>Let's chat
+                    </motion.h2>
+                    <motion.div variants={slideRight}>
+                        <p className={'text-lari-blue text-center lg:text-left'}>Want to connect, have a chat about
+                            software, my projects, coffee or simply the weather?</p>
+                        <p className={'text-lari-blue text-center lg:text-left'}>Send me a message, and let's talk!</p>
+                    </motion.div>
                 </div>
                 <div className={'flex gap-24 flex-col lg:flex-row'}>
-                    <form>
-                        <div className={'flex flex-col gap-5 sm:flex-row'}>
-                            <label htmlFor={"name"}
-                                   className={'flex flex-grow flex-col text-lari-gray text-sm font-bold'}>Name
-                                <input
-                                    className={'bg-lari-lighter-blue font-normal p-1.5 rounded-md border-2 border-lari-light-gray'}
-                                    type={"text"} id={"name"} name={"name"}/>
-                            </label>
-                            <label htmlFor={"email"}
-                                   className={'flex flex-grow flex-col text-lari-gray text-sm font-bold'}>Email
-                                <input
-                                    className={'bg-lari-lighter-blue font-normal p-1.5 rounded-md border-2 border-lari-light-gray'}
-                                    type={"text"} id={"email"} name={"email"}/>
-                            </label>
+                    <motion.form variants={slideRight}>
+                        <div className={'flex flex-col gap-5 sm:flex-row min-w-full'}>
+                                <label htmlFor={"name"}
+                                       className={'flex flex-grow flex-col text-lari-gray text-sm font-bold'}>Name
+                                    <input
+                                        className={'bg-lari-lighter-blue font-normal p-1.5 rounded-md border-2 border-lari-light-gray'}
+                                        type={"text"} id={"name"} name={"name"}/>
+                                </label>
+                                <label htmlFor={"email"}
+                                       className={'flex flex-grow flex-col text-lari-gray text-sm font-bold'}>Email
+                                    <input
+                                        className={'bg-lari-lighter-blue font-normal p-1.5 rounded-md border-2 border-lari-light-gray'}
+                                        type={"text"} id={"email"} name={"email"}/>
+                                </label>
                         </div>
-                        <label htmlFor={"message"} className={'mt-5 flex flex-col text-lari-gray text-sm font-bold'}>
+                        <label htmlFor={"message"}
+                                      className={'mt-5 flex flex-col text-lari-gray text-sm font-bold'}>
                             Message
                             <textarea
                                 className={'bg-lari-lighter-blue font-normal p-1.5 rounded-md border-2 border-lari-light-gray'}
                                 name={"message"} id={"message"} rows={10}></textarea>
                         </label>
-                        <button
-                            className={'py-2 px-10 mt-5 text-sm text-lari-gray bg-lari-light-gray font-bold rounded-md'}
-                            type={'submit'}>Submit
+                        <button className={'py-2 px-10 mt-5 text-sm text-lari-gray bg-lari-light-gray font-bold rounded-md'}
+                                       type={'submit'}>Submit
                         </button>
-                    </form>
-                    <address className={'flex flex-col mt-4 gap-5'}>
+                    </motion.form>
+                    <motion.address variants={slideRight}  className={'flex flex-col mt-4 gap-5'}>
                         <div>
                             <FontAwesomeIcon icon={faEnvelope} size={'2xl'}
                                              className={'hover:brightness-90 transition-all mr-5'} color={'#afaee3'}/>
@@ -55,9 +64,11 @@ export default function Contact() {
                                              className={'hover:brightness-90 transition-all mr-5'} color={'#afaee3'}/>
                             <a href={''} className={'text-lari-gray text-sm font-bold not-italic'}>linkedIn</a>
                         </div>
-                    </address>
+                    </motion.address>
                 </div>
-            </div>
+                <motion.img src={'/small-cluster.svg'} variants={slideRight}
+                            className={'absolute max-w-[8rem] -z-10 right-0 lg:-top-4 md:-top-20 sm:-top-[5rem] sm:max-w-[10rem] sm:flow-root hidden'}/>
+            </motion.div>
         </section>
     )
 }

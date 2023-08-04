@@ -25,7 +25,7 @@ export default function Projects() {
 
     return (
         <section
-            className={'min-h-screen flex flex-col place-items-center p-5 mt-10 pt-1/10 lg:mt-0'}>
+            className={'min-h-screen flex flex-col place-items-center p-10 mt-10 lg:mt-0'}>
             <motion.div variants={slideRight} initial={'hidden'} whileInView={'show'} className={'max-w-5xl relative'}>
                 <div className={'mb-10'}>
                     <motion.h2 variants={slideRight}

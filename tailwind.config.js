@@ -10,7 +10,9 @@ export default {
         'lari-blue': '#03244B',
         'lari-light-blue': '#D4E0FF',
         'lari-lighter-blue': '#FAFBFF',
-        'lari-gray': '#737EA3'
+        'lari-light-gray': '#DFE7F4',
+        'lari-gray': '#737EA3',
+        'lari-purple': '#afaee3',
       },
       fontSize: {
         'large': '5rem',

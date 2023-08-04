@@ -12,27 +12,32 @@ export default function Contact() {
                         software, my projects, coffee or simply the weather?</p>
                     <p className={'text-lari-blue text-center lg:text-left'}>Send me a message and let's talk!</p>
                 </div>
-                <div className={'flex gap-14 flex-col lg:flex-row'}>
+                <div className={'flex gap-24 flex-col lg:flex-row'}>
                     <form>
                         <div className={'flex flex-col gap-5 sm:flex-row'}>
-                            <label htmlFor={"name"} className={'flex flex-col text-lari-gray text-sm font-bold'}>Name
+                            <label htmlFor={"name"}
+                                   className={'flex flex-grow flex-col text-lari-gray text-sm font-bold'}>Name
                                 <input
-                                    className={'bg-lari-lighter-blue font-normal p-1.5 rounded-md border-2 border-lari-light-blue'}
+                                    className={'bg-lari-lighter-blue font-normal p-1.5 rounded-md border-2 border-lari-light-gray'}
                                     type={"text"} id={"name"} name={"name"}/>
                             </label>
-                            <label htmlFor={"email"} className={'flex flex-col text-lari-gray text-sm font-bold'}>Email
+                            <label htmlFor={"email"}
+                                   className={'flex flex-grow flex-col text-lari-gray text-sm font-bold'}>Email
                                 <input
-                                    className={'bg-lari-lighter-blue font-normal p-1.5 rounded-md border-2 border-lari-light-blue'}
+                                    className={'bg-lari-lighter-blue font-normal p-1.5 rounded-md border-2 border-lari-light-gray'}
                                     type={"text"} id={"email"} name={"email"}/>
                             </label>
                         </div>
                         <label htmlFor={"message"} className={'mt-5 flex flex-col text-lari-gray text-sm font-bold'}>
                             Message
                             <textarea
-                                className={'bg-lari-lighter-blue font-normal p-1.5 rounded-md border-2 border-lari-light-blue'}
+                                className={'bg-lari-lighter-blue font-normal p-1.5 rounded-md border-2 border-lari-light-gray'}
                                 name={"message"} id={"message"} rows={10}></textarea>
                         </label>
-                        <button className={''} type={'submit'}>Submit</button>
+                        <button
+                            className={'py-2 px-10 mt-5 text-sm text-lari-gray bg-lari-light-gray font-bold rounded-md'}
+                            type={'submit'}>Submit
+                        </button>
                     </form>
                     <address className={'flex flex-col mt-4 gap-5'}>
                         <div>

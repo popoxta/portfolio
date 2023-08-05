@@ -25,19 +25,19 @@ export default function ProjectCard({project}: { project: Project }) {
                     <div className={'flex gap-5 place-items-center justify-center lg:justify-start'}>
                         {
                             project.links.github &&
-                            <a href={project.links.github} className={'hover:brightness-90 transition-all'}>
+                            <a href={project.links.github} target={'_blank'} className={'hover:brightness-90 transition-all'}>
                                 <FontAwesomeIcon size={'2xl'} icon={faGithub} color={'#afaee3'}/>
                             </a>
                         }
                         {
                             project.links.figma &&
-                            <a href={project.links.figma} className={'hover:brightness-90 transition-all'}>
+                            <a href={project.links.figma} target={'_blank'} className={'hover:brightness-90 transition-all'}>
                                 <FontAwesomeIcon size={'xl'} icon={faFigma} color={'#afaee3'}/>
                             </a>
                         }
                         {
                             project.links.live &&
-                            <a href={project.links.live} className={'hover:brightness-90 transition-all'}>
+                            <a href={project.links.live} target={'_blank'} className={'hover:brightness-90 transition-all'}>
                                 <FontAwesomeIcon size={'xl'} icon={faUpRightFromSquare} color={'#afaee3'}/>
                             </a>
                         }

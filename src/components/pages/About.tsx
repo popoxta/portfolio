@@ -8,20 +8,21 @@ export default function About() {
 
     const starStyle: string = starsInView ? '' : '-translate-y-full'
 
-    const slideRight:Variants = slideHorizontal(-30)
-    const slideDown:Variants = slideDownVariant(-60)
+    const slideRight: Variants = slideHorizontal(-30)
+    const slideDown: Variants = slideDownVariant(-60)
 
     return (
         <section id={'about'}
-            className={'relative min-h-screen flex justify-center place-items-center p-10 mt-10 sm:mt-0'}>
+                 className={'relative min-h-screen flex justify-center place-items-center p-10 mt-10 sm:mt-0'}>
             <img src={'../../../hanging-stars.svg'} alt={'Stars hanging from the ceiling'}
                  className={`max-h-96 absolute top-0 right-1/10 -z-10 invisible lg:visible ${starStyle} transition-all ease-in-out delay-300 duration-500`}/>
 
             <div
                 className={'flex max-w-5xl gap-12 justify-center place-items-center flex-col sm:flex-row'}>
-                <motion.div className={'h-64 sm:w-[26rem] sm:h-xxl w-full'} variants={slideDown} initial={'hidden'}
+                <motion.div className={'h-80 min-w-[14rem] sm:w-[26rem] sm:h-xxl w-full'} variants={slideDown}
+                            initial={'hidden'}
                             whileInView={'show'}>
-                    <img className={'rounded-full w-full h-full object-cover object-[40%] bg-blend-screen'}
+                    <img className={'rounded-full w-full h-full object-cover sm:object-[40%] bg-blend-screen'}
                          src="/lari.png"
                          alt=""/>
                 </motion.div>
@@ -33,28 +34,30 @@ export default function About() {
                     </motion.div>
                     <motion.div variants={slideRight}>
                         <p className={'tracking-wide mb-5 text-center text-lari-blue sm:text-left'}>
-                            My name’s Lari, and I am a creative artist and software developer based in Aotearoa New
-                            Zealand, currently seeking junior roles or freelance opportunities.
+                            Hello, I'm Lari! I am a creative artist and software developer based in Aotearoa New
+                            Zealand, currently seeking junior developer or QA roles and freelance opportunities.
                         </p>
                         <p className={'tracking-wide mb-5 text-center text-lari-blue sm:text-left'}>
                             I enjoy building memorable, fun and meaningful projects, and have a strong focus on making
-                            all things simple, as they should be.
+                            all things beautifully simple with a focus on semantics, readability and good design.
                         </p>
                         <p className={'tracking-wide mb-5 text-center text-lari-blue sm:text-left'}>
-                            My day-to day sees a wide range of technology, however my main tools of trade are
-                            Typescript, React, Tailwind, Node and MongoDB.
+                            My day-to day sees a wide range of technology, however my
+                            main tools of trade are Typescript, React, Tailwind, Node, MongoDB and SQL.
                         </p>
                         <p className={'tracking-wide mb-5 text-center text-lari-blue sm:text-left'}>
-                            When not programming, you may find me listening to 80’s rock, making a good family Raclette
-                            and taking anyone I can convince to go on a 5 hour walk. Probably longer.
+                            When not programming, you may find me listening to timeless 80’s rock, perfecting my
+                            Raclette and coaxing others to go on legendary 5 hour walk. <span className={'italic'}>Probably longer.</span>
                         </p>
                     </motion.div>
                     <motion.div variants={slideRight}>
                         <p className={'tracking-wide text-sm text-center text-lari-blue sm:text-left'}>
-                            Want to know more or grab a coffee?
+                            Curious to learn more or share a coffee?
                         </p>
                         <p className={'tracking-wide text-sm text-center text-lari-blue sm:text-left'}>
-                            Feel free to <a href="#contact">get in touch.</a>
+                            Feel free to
+                            <a className={'font-bold text-lari-gray hover:text-lari-purple transition-all ease-in-out duration-300'}
+                               href="#contact"> get in touch.</a>
                         </p>
                     </motion.div>
                 </motion.article>

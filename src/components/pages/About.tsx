@@ -13,7 +13,7 @@ export default function About() {
 
     return (
         <section id={'about'}
-                 className={'relative min-h-screen flex justify-center place-items-center p-10 mt-10 sm:mt-0'}>
+                 className={'relative min-h-screen flex justify-center place-items-center p-10 mt-10 pb-20 lg:pb-10 sm:mt-0'}>
             <img src={'../../../hanging-stars.svg'} alt={'Stars hanging from the ceiling'}
                  className={`max-h-96 absolute top-0 right-1/10 -z-10 invisible lg:visible ${starStyle} transition-all ease-in-out delay-300 duration-500`}/>
 

@@ -25,20 +25,20 @@ export default function ProjectCard({project}: { project: Project }) {
                     <div className={'flex gap-5 place-items-center justify-center lg:justify-start'}>
                         {
                             project.links.github &&
-                            <a href={project.links.github} target={'_blank'} className={'hover:brightness-90 transition-all'}>
-                                <FontAwesomeIcon size={'2xl'} icon={faGithub} color={'#afaee3'}/>
+                            <a href={project.links.github} target={'_blank'} className={'text-lari-purple hover:brightness-90 transition-all'}>
+                                <FontAwesomeIcon size={'2xl'} icon={faGithub}/>
                             </a>
                         }
                         {
                             project.links.figma &&
-                            <a href={project.links.figma} target={'_blank'} className={'hover:brightness-90 transition-all'}>
-                                <FontAwesomeIcon size={'xl'} icon={faFigma} color={'#afaee3'}/>
+                            <a href={project.links.figma} target={'_blank'} className={'text-lari-purple hover:brightness-90 transition-all'}>
+                                <FontAwesomeIcon size={'xl'} icon={faFigma}/>
                             </a>
                         }
                         {
                             project.links.live &&
-                            <a href={project.links.live} target={'_blank'} className={'hover:brightness-90 transition-all'}>
-                                <FontAwesomeIcon size={'xl'} icon={faUpRightFromSquare} color={'#afaee3'}/>
+                            <a href={project.links.live} target={'_blank'} className={'text-lari-purple hover:brightness-90 transition-all'}>
+                                <FontAwesomeIcon size={'xl'} icon={faUpRightFromSquare}/>
                             </a>
                         }
                     </div>

@@ -45,7 +45,7 @@ const projectsData: Project[] = [
         description: 'A fun and cheeky twist on a classic calculator, Evil Calculator allows for evil modifications to ' +
             'be made on top of a regular calculator application to befuddle friends and foes alike.' +
             'Evil calculator is a TypeScript and React project utilising tokenization to calculate and confuse.',
-        image: '/projects/ordinary-calculator.png',
+        image: 'projects/ordinary-calculator.png',
         links: {
             github: 'https://github.com/popoxta/evil-calculator',
             figma: 'https://www.figma.com/file/xU1a9rYhIuuQxJqgxv7GUS/Untitled?type=design&node-id=0%3A1&mode=design&t=59XbRIX2gdCFvFhn-1',

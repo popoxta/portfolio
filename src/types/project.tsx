@@ -5,6 +5,7 @@ export interface Project {
     links: {
         github: (string | null),
         figma: (string | null),
-        live: (string | null)
+        live: (string | null),
+        testimonial: (string | null)
     }
 }

@@ -1,6 +1,6 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faFigma} from "@fortawesome/free-brands-svg-icons"
-import {faUpRightFromSquare} from "@fortawesome/free-solid-svg-icons";
+import {faUpRightFromSquare, faCertificate} from "@fortawesome/free-solid-svg-icons";
 import {Project} from "../types/project.tsx";
 import {ReactElement} from "react";
 
@@ -39,6 +39,12 @@ export default function ProjectCard({project}: { project: Project }) {
                             project.links.live &&
                             <a href={project.links.live} target={'_blank'} className={'text-lari-purple hover:brightness-90 transition-all'}>
                                 <FontAwesomeIcon size={'xl'} icon={faUpRightFromSquare}/>
+                            </a>
+                        }
+                        {
+                            project.links.testimonial &&
+                            <a href={`public/${project.links.testimonial}`} target={'_blank'} className={'text-lari-purple hover:brightness-90 transition-all'}>
+                                <FontAwesomeIcon size={'xl'} icon={faCertificate}/>
                             </a>
                         }
                     </div>

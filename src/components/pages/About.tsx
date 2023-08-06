@@ -6,7 +6,7 @@ import {faChevronDown} from "@fortawesome/free-solid-svg-icons";
 
 export default function About() {
     const starsRef: React.MutableRefObject<null> = useRef(null)
-    const starsInView: boolean = useInView(starsRef, {amount: 'all'})
+    const starsInView: boolean = useInView(starsRef, {once: true})
 
     const starStyle: string = starsInView ? '' : '-translate-y-full'
 
@@ -22,14 +22,13 @@ export default function About() {
             <div
                 className={'flex max-w-5xl gap-12 justify-center place-items-center flex-col sm:flex-row'}>
                 <motion.div className={'h-80 min-w-[14rem] sm:w-[26rem] sm:h-xxl w-full'} variants={slideDown}
-                            initial={'hidden'}
-                            whileInView={'show'}>
+                            initial={'hidden'} whileInView={'show'} viewport={{once: true}}>
                     <img className={'rounded-full w-full h-full object-cover sm:object-[40%] bg-blend-screen'}
                          src="/lari.png"
                          alt=""/>
                 </motion.div>
 
-                <motion.article variants={slideRight} initial={'hidden'} whileInView={'show'} ref={starsRef}>
+                <motion.article variants={slideRight} initial={'hidden'} whileInView={'show'} ref={starsRef} viewport={{once: true}}>
                     <motion.div variants={slideRight}>
                         <h2 className={'text-5xl font-bold mb-10 text-lari-blue text-center sm:text-left'}>It's nice to
                             meet you.</h2>
@@ -63,7 +62,7 @@ export default function About() {
                         </p>
                     </motion.div>
                 </motion.article>
-                <motion.div variants={slideDown} initial={'hidden'} whileInView={'show'}
+                <motion.div variants={slideDown} initial={'hidden'} whileInView={'show'} viewport={{once: true}}
                             className={'bottom-10 absolute hidden sm:inline-block'}>
                     <a href={'#projects'}>
                         <FontAwesomeIcon icon={faChevronDown} size={'2xl'}

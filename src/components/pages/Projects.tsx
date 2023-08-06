@@ -31,7 +31,7 @@ export default function Projects() {
     return (
         <section id={'projects'}
                  className={'relative min-h-screen flex flex-col place-items-center p-10 mt-10 pb-20 lg:pb-10  lg:mt-0'}>
-            <motion.div variants={slideRight} initial={'hidden'} whileInView={'show'}
+            <motion.div variants={slideRight} initial={'hidden'} whileInView={'show'} viewport={{once: true}}
                         className={'max-w-5xl mt-[6%] relative'}>
                 <div className={'mb-10'}>
                     <motion.h2 variants={slideRight}
@@ -54,7 +54,7 @@ export default function Projects() {
                 <motion.img src={'/star-cluster.svg'} variants={slideRight}
                             className={'absolute max-w-[13rem] sm:max-w-[16rem] -z-10 -right-0 -top-24 md:-top-16 lg:-right-16 lg:-top-10'}/>
             </motion.div>
-            <motion.div variants={slideDown} initial={'hidden'} whileInView={'show'}
+            <motion.div variants={slideDown} initial={'hidden'} whileInView={'show'} viewport={{once: true}}
                         className={'bottom-10 absolute hidden sm:inline-block'}>
                 <a href={'#contact'}>
                     <FontAwesomeIcon icon={faChevronDown} size={'2xl'}

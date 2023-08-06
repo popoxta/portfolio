@@ -23,7 +23,7 @@ export default function Contact() {
 
     return (
         <section id={'contact'} className={'min-h-screen p-10 relative flex flex-col justify-center place-items-center'}>
-            <motion.div variants={slideRight} initial={'hidden'} whileInView={'show'} className={'max-w-5xl'}>
+            <motion.div variants={slideRight} initial={'hidden'} whileInView={'show'} className={'max-w-5xl'} viewport={{once: true}}>
                 <div className={'mb-10'}>
                     <motion.h2 variants={slideRight}
                                className={'text-5xl font-bold text-lari-blue mb-5 text-center lg:text-left'}>Let's chat

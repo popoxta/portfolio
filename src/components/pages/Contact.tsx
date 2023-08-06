@@ -79,7 +79,7 @@ export default function Contact() {
                         </div>
                     </motion.address>
                 </div>
-                <motion.img src={'/small-cluster.svg'} variants={slideRight}
+                <motion.img src={'assets/small-cluster.svg'} variants={slideRight}
                             className={'absolute max-w-[8rem] -z-10 right-0 lg:-top-4 md:-top-20 sm:-top-[5rem] sm:max-w-[10rem] sm:flow-root hidden'}/>
             </motion.div>
         </section>

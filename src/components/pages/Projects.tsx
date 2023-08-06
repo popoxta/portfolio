@@ -51,7 +51,7 @@ export default function Projects() {
                         </motion.div>
                     </AnimatePresence>
                 </motion.div>
-                <motion.img src={'/star-cluster.svg'} variants={slideRight}
+                <motion.img src={'assets/star-cluster.svg'} variants={slideRight}
                             className={'absolute max-w-[13rem] sm:max-w-[16rem] -z-10 -right-0 -top-24 md:-top-16 lg:-right-16 lg:-top-10'}/>
             </motion.div>
             <motion.div variants={slideDown} initial={'hidden'} whileInView={'show'} viewport={{once: true}}

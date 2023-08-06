@@ -66,16 +66,19 @@ export default function Contact() {
                     <motion.address variants={slideRight} className={'flex flex-col mt-4 gap-5 '}>
                         <div className={'hover:brightness-90 transition-all ease-in-out text-lari-purple'}>
                             <FontAwesomeIcon icon={faEnvelope} size={'2xl'} className={'mr-5'}/>
-                            <a href={'mailto:larissaruecker7@gmail.com'}
+                            <a href={'mailto:larissaruecker7@gmail.com'} title={'Email address'}
                                className={'text-lari-gray text-sm font-bold not-italic'}>larissaruecker7@gmail.com</a>
                         </div>
                         <div className={'hover:brightness-90 transition-all ease-in-out text-lari-purple'}>
                             <FontAwesomeIcon icon={faGithub} size={'2xl'} className={'mr-5'} color={'#afaee3'}/>
-                            <a href={'https://www.linkedin.com/in/larissa-ruecker/'} target={'_blank'} className={'text-lari-gray text-sm font-bold not-italic'}>popoxta</a>
+                            <a href={'https://www.linkedin.com/in/larissa-ruecker/'} target={'_blank'}
+                               title={'GitHub'}
+                               className={'text-lari-gray text-sm font-bold not-italic'}>popoxta</a>
                         </div>
                         <div className={'hover:brightness-90 transition-all ease-in-out text-lari-purple'}>
                             <FontAwesomeIcon icon={faLinkedin} size={'2xl'} className={'mr-5'} color={'#afaee3'}/>
-                            <a href={'https://github.com/popoxta/'} target={'_blank'} className={'text-lari-gray text-sm font-bold not-italic'}>linkedIn</a>
+                            <a href={'https://github.com/popoxta/'} target={'_blank'} title={'LinkedIn'}
+                               className={'text-lari-gray text-sm font-bold not-italic'}>linkedIn</a>
                         </div>
                     </motion.address>
                 </div>

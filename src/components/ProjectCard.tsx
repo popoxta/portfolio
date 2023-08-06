@@ -25,25 +25,25 @@ export default function ProjectCard({project}: { project: Project }) {
                     <div className={'flex gap-5 place-items-center justify-center lg:justify-start'}>
                         {
                             project.links.github &&
-                            <a href={project.links.github} target={'_blank'} className={'text-lari-purple hover:brightness-90 transition-all'}>
+                            <a href={project.links.github} target={'_blank'} title={'Source code'} className={'text-lari-purple hover:brightness-90 transition-all'}>
                                 <FontAwesomeIcon size={'2xl'} icon={faGithub}/>
                             </a>
                         }
                         {
                             project.links.figma &&
-                            <a href={project.links.figma} target={'_blank'} className={'text-lari-purple hover:brightness-90 transition-all'}>
+                            <a href={project.links.figma} title={'Figma'} target={'_blank'} className={'text-lari-purple hover:brightness-90 transition-all'}>
                                 <FontAwesomeIcon size={'xl'} icon={faFigma}/>
                             </a>
                         }
                         {
                             project.links.live &&
-                            <a href={project.links.live} target={'_blank'} className={'text-lari-purple hover:brightness-90 transition-all'}>
+                            <a href={project.links.live} title={'Live version'} target={'_blank'} className={'text-lari-purple hover:brightness-90 transition-all'}>
                                 <FontAwesomeIcon size={'xl'} icon={faUpRightFromSquare}/>
                             </a>
                         }
                         {
                             project.links.testimonial &&
-                            <a href={`public/${project.links.testimonial}`} target={'_blank'} className={'text-lari-purple hover:brightness-90 transition-all'}>
+                            <a href={`${project.links.testimonial}`} title={'Testimonial'} target={'_blank'} className={'text-lari-purple hover:brightness-90 transition-all'}>
                                 <FontAwesomeIcon size={'xl'} icon={faCertificate}/>
                             </a>
                         }

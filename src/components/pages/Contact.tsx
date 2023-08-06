@@ -1,5 +1,5 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import {faEnvelope, faFileAlt} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons"
 import {slideHorizontal} from "../../variants/variants.ts";
 import {motion, Variants} from "framer-motion";
@@ -65,20 +65,25 @@ export default function Contact() {
                     </motion.form>
                     <motion.address variants={slideRight} className={'flex flex-col mt-4 gap-5 '}>
                         <div className={'hover:brightness-90 transition-all ease-in-out text-lari-purple'}>
-                            <FontAwesomeIcon icon={faEnvelope} size={'2xl'} className={'mr-5'}/>
+                            <FontAwesomeIcon icon={faEnvelope} size={'2xl'} className={'mr-6'}/>
                             <a href={'mailto:larissaruecker7@gmail.com'} title={'Email address'}
                                className={'text-lari-gray text-sm font-bold not-italic'}>larissaruecker7@gmail.com</a>
                         </div>
                         <div className={'hover:brightness-90 transition-all ease-in-out text-lari-purple'}>
-                            <FontAwesomeIcon icon={faGithub} size={'2xl'} className={'mr-5'} color={'#afaee3'}/>
+                            <FontAwesomeIcon icon={faGithub} size={'2xl'} className={'mr-6'}/>
                             <a href={'https://www.linkedin.com/in/larissa-ruecker/'} target={'_blank'}
                                title={'GitHub'}
                                className={'text-lari-gray text-sm font-bold not-italic'}>popoxta</a>
                         </div>
                         <div className={'hover:brightness-90 transition-all ease-in-out text-lari-purple'}>
-                            <FontAwesomeIcon icon={faLinkedin} size={'2xl'} className={'mr-5'} color={'#afaee3'}/>
+                            <FontAwesomeIcon icon={faLinkedin} size={'2xl'} className={'mr-7'}/>
                             <a href={'https://github.com/popoxta/'} target={'_blank'} title={'LinkedIn'}
                                className={'text-lari-gray text-sm font-bold not-italic'}>linkedIn</a>
+                        </div>
+                        <div className={'hover:brightness-90 transition-all ease-in-out text-lari-purple'}>
+                            <FontAwesomeIcon icon={faFileAlt} size={'2xl'} className={'mr-8'}/>
+                            <a href={'resume.pdf'} target={'_blank'} title={'Resume'}
+                               className={'text-lari-gray text-sm font-bold not-italic'}>Resume</a>
                         </div>
                     </motion.address>
                 </div>

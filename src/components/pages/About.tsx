@@ -1,6 +1,8 @@
 import {useInView, motion, Variants} from "framer-motion";
 import React, {useRef} from "react";
 import {slideDownVariant, slideHorizontal} from "../../variants/variants.ts";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faChevronDown} from "@fortawesome/free-solid-svg-icons";
 
 export default function About() {
     const starsRef: React.MutableRefObject<null> = useRef(null)
@@ -61,6 +63,13 @@ export default function About() {
                         </p>
                     </motion.div>
                 </motion.article>
+                <motion.div variants={slideDown} initial={'hidden'} whileInView={'show'}
+                            className={'bottom-10 absolute hidden sm:inline-block'}>
+                    <a href={'#projects'}>
+                        <FontAwesomeIcon icon={faChevronDown} size={'2xl'}
+                                         className={'text-lari-purple hover:text-lari-light-blue transition-all ease-in-out duration-300'}/>
+                    </a>
+                </motion.div>
             </div>
         </section>
     )

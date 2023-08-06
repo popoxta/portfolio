@@ -10,7 +10,7 @@ export default function ProjectCard({project}: { project: Project }) {
         <p key={i} className={'text-sm text-lari-blue'}>{sentence}</p>)
 
     return (
-        <div className={'relative flex place-items-center w-9/10 mx-auto lg:max-w-none md:max-w-3xl '}>
+        <div className={'relative flex place-items-center w-9/10 mx-auto lg:max-w-none md:max-w-3xl mb-10'}>
             <div className={'absolute right-0 bg-lari-lighter-blue rounded-lg -z-10 w-full bottom-0 h-3/4 lg:h-full lg:w-9/10 '}>
             </div>
             <div

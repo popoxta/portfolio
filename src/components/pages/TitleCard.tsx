@@ -15,7 +15,7 @@ export default function TitleCard() {
         <main id={'home'} className={'h-screen p-5 sm:p-12 bg-lari-blue bg-gradient-radial '}>
             <div className={'border-2 p-4 sm:p-0 overflow-hidden h-full relative'}>
                 <motion.section variants={slideRight} initial={'hidden'} whileInView={'show'} viewport={{once: true}}
-                                className={'h-full flex justify-start items-center relative z-50'}>
+                                className={'h-full flex justify-start items-center relative z-10'}>
                     <div className={'sm:pl-16'}>
                         <motion.div>
                             <h1 className={'flex flex-row sm:text-4xl'}>
@@ -45,7 +45,7 @@ export default function TitleCard() {
                     <div className={'launch-bar w-px bg-white h-12 sm:h-16 transition-transform'}></div>
                 </motion.div>
 
-                <Particles className={'absolute w-full h-full top-0'} id={'tsparticles'}
+                <Particles className={'absolute w-full h-full top-0 z-20'} id={'tsparticles'}
                            init={particlesInit} options={{
                     'particles': {
                         'number': {
@@ -149,7 +149,7 @@ export default function TitleCard() {
                             }
                         }
                     },
-                    fullScreen: {enable: false, zIndex: -5}, 'retina_detect': true
+                    fullScreen: {enable: false}, 'retina_detect': true
                 }}/>
             </div>
         </main>

@@ -71,13 +71,13 @@ export default function Contact() {
                         </div>
                         <div className={'hover:brightness-90 transition-all ease-in-out text-lari-purple'}>
                             <FontAwesomeIcon icon={faGithub} size={'2xl'} className={'mr-6'}/>
-                            <a href={'https://www.linkedin.com/in/larissa-ruecker/'} target={'_blank'}
+                            <a href={'https://github.com/popoxta/'} target={'_blank'}
                                title={'GitHub'}
                                className={'text-lari-gray text-sm font-bold not-italic'}>popoxta</a>
                         </div>
                         <div className={'hover:brightness-90 transition-all ease-in-out text-lari-purple'}>
                             <FontAwesomeIcon icon={faLinkedin} size={'2xl'} className={'mr-7'}/>
-                            <a href={'https://github.com/popoxta/'} target={'_blank'} title={'LinkedIn'}
+                            <a href={'https://www.linkedin.com/in/larissa-ruecker/'} target={'_blank'} title={'LinkedIn'}
                                className={'text-lari-gray text-sm font-bold not-italic'}>linkedIn</a>
                         </div>
                         <div className={'hover:brightness-90 transition-all ease-in-out text-lari-purple'}>

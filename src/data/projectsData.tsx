@@ -17,7 +17,7 @@ const projectsData: Project[] = [
     {
         name: 'BoxIt',
         description: 'BoxIt is an inventory management system that is aimed to create a simple yet intuitive approach' +
-            'to storing arbitrary items in arbitrary containers with a creative flair. ' +
+            ' to storing arbitrary items in arbitrary containers with a creative flair. ' +
             'This full stack application is built using React Router, Express, Node, MongoDB and PassportJS.',
         image: '/projects/boxit.png',
         links: {

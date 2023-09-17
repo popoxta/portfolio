@@ -15,6 +15,19 @@ const projectsData: Project[] = [
         }
     },
     {
+        name: 'Loo Profile',
+        description: 'Loo Profile is my latest project, a user-friendly web app built with TypeScript, React, ' +
+            'React-Query, SQL, Tailwind, and Leaflet. It lets you create an account, find nearby bathrooms on a map, ' +
+            'and add new bathrooms and reviews.',
+        image: '/projects/loo-profile.png',
+        links: {
+            github: 'https://github.com/popoxta/loo-profile',
+            figma: 'https://www.figma.com/file/Knbj5kkdzLhfCVzG02689M/Untitled?type=design&node-id=40%3A402&mode=design&t=R4MXgAbNKO0XQUxk-1',
+            live: null,
+            testimonial: null
+        }
+    },
+    {
         name: 'BoxIt',
         description: 'BoxIt is an inventory management system that is aimed to create a simple yet intuitive approach' +
             ' to storing arbitrary items in arbitrary containers with a creative flair. ' +

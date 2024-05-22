@@ -35,20 +35,21 @@ export default function About() {
                     </motion.div>
                     <motion.div variants={slideRight}>
                         <p className={'tracking-wide mb-5 text-center text-lari-blue sm:text-left'}>
-                            Hello, I'm Lari! I am a creative artist and software developer based in Aotearoa New
-                            Zealand, currently seeking junior developer or QA roles and freelance opportunities.
+                            Hello, I'm Lari! I am a Test Automation Engineer based in Aotearoa New
+                            Zealand, always on the lookout for new and exciting opportunities.
                         </p>
                         <p className={'tracking-wide mb-5 text-center text-lari-blue sm:text-left'}>
                             I enjoy building memorable, fun and meaningful projects, and have a strong focus on making
-                            all things beautifully simple with a focus on semantics, readability and good design.
+                            all things beautifully simple with a focus on semantics, readability and design. Perfecting
+                            my craft is a strong focus, and I enjoy all aspects of learning and mentoring.
                         </p>
                         <p className={'tracking-wide mb-5 text-center text-lari-blue sm:text-left'}>
                             My day-to day sees a wide range of technology, however my
-                            main tools of trade are Typescript, React, Tailwind, Node, MongoDB and SQL.
+                            main tools of trade are Playwright, Appium, Typescript, React, Tailwind, Node, MongoDB, SQL.
                         </p>
                         <p className={'tracking-wide mb-5 text-center text-lari-blue sm:text-left'}>
                             When not programming, you may find me listening to timeless 80’s rock, perfecting my
-                            Raclette and coaxing others to go on legendary 5 hour walk. <span className={'italic'}>Probably longer.</span>
+                            Raclette and coaxing others to go on legendary 5 hour walks. <span className={'italic'}>Probably longer.</span>
                         </p>
                     </motion.div>
                     <motion.div variants={slideRight}>

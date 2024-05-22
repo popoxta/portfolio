@@ -24,7 +24,7 @@ export default function About() {
                 <motion.div className={'h-80 min-w-[14rem] sm:w-[26rem] sm:h-xxl w-full'} variants={slideDown}
                             initial={'hidden'} whileInView={'show'} viewport={{once: true}}>
                     <img className={'rounded-full w-full h-full object-cover sm:object-[40%] bg-blend-screen'}
-                         src="/lari.png"
+                         src="/sky.jpg"
                          alt=""/>
                 </motion.div>
 

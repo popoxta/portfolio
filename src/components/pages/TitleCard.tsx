@@ -28,7 +28,7 @@ export default function TitleCard() {
                         <motion.div variants={slideRight}>
                             <p className={'text-xs mt-2 mb-1 italic tracking-wider text-lari-light-blue'}>definition
                                 (noun)</p>
-                            <p className={'text-sm text-lari-light-blue'} style={{maxWidth: '22rem'}}>Software developer
+                            <p className={'text-sm text-lari-light-blue'} style={{maxWidth: '22rem'}}>Test Engineer
                                 and lover of simple things like bunnies and stars ✨</p>
                         </motion.div>
                     </div>

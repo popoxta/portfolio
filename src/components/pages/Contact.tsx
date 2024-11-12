@@ -80,11 +80,6 @@ export default function Contact() {
                             <a href={'https://www.linkedin.com/in/larissa-ruecker/'} target={'_blank'} title={'LinkedIn'}
                                className={'text-lari-gray text-sm font-bold not-italic'}>linkedIn</a>
                         </div>
-                        <div className={'hover:brightness-90 transition-all ease-in-out text-lari-purple'}>
-                            <FontAwesomeIcon icon={faFileAlt} size={'2xl'} className={'mr-8'}/>
-                            <a href={'resume.pdf'} target={'_blank'} title={'Resume'}
-                               className={'text-lari-gray text-sm font-bold not-italic'}>Resume</a>
-                        </div>
                     </motion.address>
                 </div>
                 <motion.img src={'assets/small-cluster.svg'} variants={slideRight}

@@ -36,7 +36,7 @@ export default function Projects() {
                 <div className={'mb-10'}>
                     <motion.h2 variants={slideRight}
                                className={'text-5xl font-bold text-lari-blue text-center lg:text-left'}>
-                        Projects
+                        Dev Projects
                     </motion.h2>
                     <motion.div
                         variants={slideRight}

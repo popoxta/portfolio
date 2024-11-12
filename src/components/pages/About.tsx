@@ -40,16 +40,17 @@ export default function About() {
                         </p>
                         <p className={'tracking-wide mb-5 text-center text-lari-blue sm:text-left'}>
                             I enjoy building memorable, fun and meaningful projects, and have a strong focus on making
-                            all things beautifully simple with a focus on semantics, readability and design. Perfecting
+                            automation beautifully simple with a focus on semantics, readability and design. Perfecting
                             my craft is a strong focus, and I enjoy all aspects of learning and mentoring.
                         </p>
                         <p className={'tracking-wide mb-5 text-center text-lari-blue sm:text-left'}>
                             My day-to day sees a wide range of technology, however my
-                            main tools of trade are Playwright, Appium, Typescript, React, Tailwind, Node, MongoDB, SQL.
+                            main tools of trade are Playwright, Cucumber, Appium, Browserstack, Typescript, SQL, Python and Postman.
                         </p>
                         <p className={'tracking-wide mb-5 text-center text-lari-blue sm:text-left'}>
-                            When not programming, you may find me listening to timeless 80’s rock, perfecting my
-                            Raclette and coaxing others to go on legendary 5 hour walks. <span className={'italic'}>Probably longer.</span>
+                            When not programming, you may find me listening to timeless 80’s rock 
+                            (ZZ Top, Pink Floyd, Outlaws, Eagles...), eating bread and coaxing others to go on 
+                            legendary 5 hour walks. <span className={'italic'}>Probably longer.</span>
                         </p>
                     </motion.div>
                     <motion.div variants={slideRight}>

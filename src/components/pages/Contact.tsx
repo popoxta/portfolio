@@ -1,5 +1,5 @@
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faEnvelope, faFileAlt} from "@fortawesome/free-solid-svg-icons";
+Rimport {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons"
 import {slideHorizontal} from "../../variants/variants.ts";
 import {motion, Variants} from "framer-motion";

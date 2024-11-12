@@ -18,7 +18,7 @@ const projectsData: Project[] = [
         name: 'Loo Profile',
         description: 'Loo Profile is my latest project, a user-friendly web app built with TypeScript, React, ' +
             'React-Query, SQL, Tailwind, and Leaflet. It lets you create an account, find nearby bathrooms on a map, ' +
-            'and add new bathrooms and reviews.',
+            'and add new bathrooms and reviews. It is completed by a comprehensive Playwright-driven test suite.',
         image: '/projects/loo-profile.png',
         links: {
             github: 'https://github.com/popoxta/loo-profile',
